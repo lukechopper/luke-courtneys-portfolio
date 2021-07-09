@@ -462,8 +462,10 @@ function generateOverlay(btn){
     overlay.addEventListener('click', closeCard);
     card.querySelector('.project-modal__x-icon').addEventListener('click', closeCard);
     //Send NavBar Up
-    animateNavBarUpOrDown(true);
-    navBarOverlay = true;
+    if(hasNavAnimated && innerHeight > 800){
+        animateNavBarUpOrDown(true);
+        navBarOverlay = true;
+    }
 }
 
 function closeCard(e){
@@ -477,9 +479,11 @@ function closeCard(e){
         overlay.remove();
         card.remove();
     }, 300);
-    //Nav bar come back down
-    animateNavBarUpOrDown(false);
     navBarOverlay = false;
+    //Nav bar come back down
+    if(!hasNavAnimated && innerHeight > 800){
+        animateNavBarUpOrDown(false);
+    }
 }
 
 window.addEventListener("resize", e => {

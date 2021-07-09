@@ -107,7 +107,7 @@ body{
     color: white;
     display: none;
     float: right;
-    padding: 17px;
+    padding: 17px 25px 17px 17px;
     font-size: 30px;
     cursor: pointer;
 }
@@ -156,6 +156,7 @@ body{
 .about-section{
     width: 100%;
     padding-bottom: 80px;
+    overflow-x: hidden;
 }
 .about-section__underline{
     width: 60px;
