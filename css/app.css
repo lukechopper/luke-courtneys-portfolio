@@ -412,7 +412,7 @@ body{
     cursor: pointer;
     font-size: 2em;
 }
-@media(max-height: 758px){
+@media(max-height: 800px){
     .project-modal{
         display: block;
     }
