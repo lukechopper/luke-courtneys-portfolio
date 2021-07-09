@@ -8,11 +8,11 @@ require_once './PHPMailer/src/SMTP.php';
 
 $phpmailer = new PHPMailer();
 $phpmailer->isSMTP();
-$phpmailer->Host = 'smtp.gmail.com';
+$phpmailer->Host = $_SERVER['HTTP_PHP_MAILER_HOST'];
 $phpmailer->SMTPAuth = true;
-$phpmailer->Port = 587;
-$phpmailer->Username = 'lukechopper22@gmail.com';
-$phpmailer->Password = 'dqxucbevbecbcjpq';
+$phpmailer->Port = $_SERVER['HTTP_PHP_MAILER_PORT'];
+$phpmailer->Username = $_SERVER['HTTP_PHP_MAILER_USERNAME'];
+$phpmailer->Password = $_SERVER['HTTP_PHP_MAILER_PASSWORD'];
 
 
 $contentType = isset($_SERVER['CONTENT_TYPE']) ? trim($_SERVER['CONTENT_TYPE']) : '';
