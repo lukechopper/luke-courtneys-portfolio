@@ -8,49 +8,49 @@ const galleryInformation = [
     {
         title: "Tank Battle Game",
         a: 'https://lukechopper.github.io/Luke-Courtney-s-Tank-Battle/',
-        img: '<img src="https://i3.lensdump.com/i/Zg3hMP.png"  class="project-modal__img" alt="Zg3hMP.png" border="0" />',
+        img: '<img src="https://i1.lensdump.com/i/ZBAVBT.png" class="project-modal__img" alt="ZBAVBT.png" border="0" />',
         text: "Based on the eminent online arcade game, Tank Trouble. This inspired game, features all of the core mechanics of the real one. The defining feature of this one, is that it was created in pure JavaScript and HTML5 canvas, so no JavaScript frameworks or anything of that nature was used. This game really was built from the ground up. Which makes its smooth gameplay and comprehensive collision detection all the more commendable. "
     },
     {
         title: "Ersatz Amazon Sidebar",
         a: "https://www.youtube.com/watch?v=luJlfKc4etw&t=90s",
-        img: '<img src="https://i1.lensdump.com/i/Zg41YT.jpg"  class="project-modal__img" alt="Zg41YT.jpg" border="0" />',
+        img: '<img src="https://i3.lensdump.com/i/ZBAq27.png"  class="project-modal__img" alt="Zg41YT.jpg" border="0" />',
         text: "Replica of the Amazon Sidebar that was in use as of the project’s creation. Was designed to look and feel like the real version as much as possible. All functionality has been recreated; everything from animations, to content. All can be found here, and the full process, from start to finish, can be found on my YouTube channel. "
     },
     {
         title: "Ersatz BBC Website",
         a: "https://www.youtube.com/watch?v=F8ss3kjCp4I&t=526s",
-        img: '<img src="https://i1.lensdump.com/i/Zg4ACi.jpg"  class="project-modal__img" alt="Zg4ACi.jpg" border="0" />',
+        img: '<img src="https://i.lensdump.com/i/ZBAloQ.png"  class="project-modal__img" alt="Zg4ACi.jpg" border="0" />',
         text: "As a fun challenge, and to push my front-end skills to the limit, I decided to recreate the homepage design of the BBC website that was currently in use as of the project’s creation. Stand out features are the responsive elements of the website, like the Navbar and the connected dropdown menu which work beautifully in tandem with each other. This website is more then equipped to deal with the cumbersome demands that the multitudes of different screen sizes bring to web dev in the modern age."
     },
     {
         title: "Circus Game",
         a: "https://lukechopper.github.io/Circus-Canvas-Game/",
-        img: '<img src="https://i2.lensdump.com/i/Zg4Wzo.jpg"  class="project-modal__img" alt="Zg4Wzo.jpg" border="0" />',
+        img: '<img src="https://i3.lensdump.com/i/ZBAnek.png"  class="project-modal__img" alt="Zg4Wzo.jpg" border="0" />',
         text: "Based on the 1971 game of the same name by Exidy. This version differs from the fact that it is web compatible as it was made in plain JavaScript and HTML5 canvas. A fun little project that pushed my JavaScript skills to the limit. I have no doubt that I finished this project a significantly better programmer as compared to when I started it. "
     },
     {
         title: "Live Extreme Weather Tracker",
         a: "https://www.youtube.com/watch?v=uMSGnZFW-h8&t=13s",
-        img: '<img src="https://i3.lensdump.com/i/Zg4iw9.jpg"  class="project-modal__img" alt="Zg4iw9.jpg" border="0" />',
+        img: '<img src="https://i.lensdump.com/i/ZBAvxx.png"  class="project-modal__img" alt="Zg4iw9.jpg" border="0" />',
         text: "A real time extreme weather tracker, made in React js with the Google Maps Api. This is not some subsistence project. Features include; a real time search bar which allows for filtering based on the event type; clustering, so that the user doesn’t get overwhelmed with the number of markers that are in near vicinity to each other and an information box that gives the user information on the event that they want to look into."
     },
     {
         title: "YouTube Style Comments System",
         a: "https://www.youtube.com/watch?v=F_8QqP6GgxE&t=242s",
-        img: '<img src="https://i.lensdump.com/i/Zg4012.jpg"  class="project-modal__img" alt="Zg4012.jpg" border="0" />',
+        img: '<img src="https://i1.lensdump.com/i/ZBAMRH.png"  class="project-modal__img" alt="Zg4012.jpg" border="0" />',
         text: "This project does a fine job at demonstrating my twofold skills of both front-end and back-end development. On the front-end side, we have a visually appealing comments system which mirrors the highly professional one employed by YouTube. This mirror image even extends to the more technical parts of the design, like the infinitely scrolling comments for example, which is also replicated in this project. On the back-end side, we have everything begin stored and managed with Node js and MongoDB which have relationships to handle replies, etc."
     },
     {
         title: "Typing Test Game",
         a: "https://www.youtube.com/watch?v=oYf_u040C60&t=23s",
-        img: '<img src="https://i1.lensdump.com/i/Zg4IKv.jpg"  class="project-modal__img" alt="Zg4IKv.jpg" border="0" />',
+        img: '<img src="https://i2.lensdump.com/i/ZBAY71.png"  class="project-modal__img" alt="Zg4IKv.jpg" border="0" />',
         text: "Put your typing skills to the test with this fun, addicting typing game. Comments are randomly selected from a list of the 1,000 most common words in the English language. The player will then have 1 minute to correctly type out as many of these words as they can. When the time is up, they will get receive their calculated words per minute score based on the test that they just completed."
     },
     {
-        title: "Cisco Animated Image Display",
+        title: "Preference Finder Interactive Quiz",
         a: "https://www.youtube.com/watch?v=Fegl4X2HdTM&t=72s",
-        img: '<img src="https://i.lensdump.com/i/Zg4tqz.jpg" class="project-modal__img"  alt="Zg4tqz.jpg" border="0" />',
-        text: "A complex way of displaying 3 images with the basic front-end technologies. The user can hover their mouse over any of the images to expand it outwards along with the associated text that gets animated in at the same time."
+        img: '<img src="https://i2.lensdump.com/i/ZBW4vi.png" class="project-modal__img"  alt="Zg4tqz.jpg" border="0" />',
+        text: "An animated SPA (single page application) where users can mathematically calculate their preferences, from best to worst, for a list of their choosing."
     }
 ]

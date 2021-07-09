@@ -6,9 +6,10 @@
     <p class="contact-section__form-title">
         Have a question or want to work together?
     </p>
-    <form class="contact-section__form">
+    <div class="contact-section__msg-section"></div>
+    <form class="contact-section__form" autocomplete="off">
         <input type="text" name="name"  required placeholder="Name" />
-        <input type="email" name="email" required placeholder="Email" />
+        <input type="text" name="subject" required placeholder="Subject" />
         <textarea placeholder="Enter Your Message Here" name="text"></textarea>
         <button type="submit" class="contact-section__form-submit">submit</button>
     </form>

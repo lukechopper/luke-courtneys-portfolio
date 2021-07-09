@@ -314,9 +314,10 @@ const galleryItems = document.querySelectorAll(".project-section__gallery-contai
 function configureGalleryItems(selection){
     if(window.matchMedia('(min-width: 1301px)').matches){
     if(selection === "react"){
-        moveItems([{num: 2, top: "0", left: "0"}, {num: 5, top: "0", left: "33.33%"},
-        {num: 6, top: "0", left: "66.66%"}]);
-        projectSection.style.height = "calc(300px + 320px)";
+        moveItems([{num: 0, top: "0", left: "0"}, {num: 2, top: "0", left: "33.33%"},
+        {num: 5, top: "0", left: "66.66%"},{num: 6, top: "33.33%", left: "0"},
+        {num: 8, top: "33.33%", left: "33.33%"}]);
+        projectSection.style.height = "calc(600px + 320px)";
     }else if(selection === "ALL" ){
         moveItems([{num: 0, top: "0", left: "0"}, {num: 1, top: "0", left: "33.33%"},
         {num: 2, top: "0", left: "66.66%"},{num: 3, top: "33.33%", left: "0"},
@@ -325,8 +326,9 @@ function configureGalleryItems(selection){
         {num: 8, top: "66.66%", left: "66.66%"}]);
         projectSection.style.height = "calc(900px + 320px)";
     }else if(selection === "frontend" ){
-        moveItems([{num: 1, top: "0", left: "0"}, {num: 3, top: "0", left: "33.33%"},
-        {num: 5, top: "0", left: "66.66%"},{num: 8, top: "33.33%", left: "0"}]);
+        moveItems([{num: 0, top: "0", left: "0"}, {num: 1, top: "0", left: "33.33%"},
+        {num: 3, top: "0", left: "66.66%"},{num: 4, top: "33.33%", left: "0"},
+        {num: 5, top: "33.33%", left: "33.33%"},{num: 8, top: "33.33%", left: "66.66%"}]);
         projectSection.style.height = "calc(600px + 320px)";
     }else if(selection === "backend"){
         moveItems([{num: 2, top: "0", left: "0"}, {num: 6, top: "0", left: "33.33%"},
@@ -335,9 +337,10 @@ function configureGalleryItems(selection){
     }
 }if(window.matchMedia('(max-width: 1300px)').matches){
     if(selection === "react"){
-        moveItems([{num: 2, top: "0", left: "0"}, {num: 5, top: "0", left: "50%"},
-        {num: 6, top: "20%", left: "0"}]);
-        projectSection.style.height = "calc(600px + 320px)";
+        moveItems([{num: 0, top: "0", left: "0"}, {num: 2, top: "0", left: "50%"},
+        {num: 5, top: "20%", left: "0"},{num: 6, top: "20%", left: "50%"},
+        {num: 8, top: "40%", left: "0"}]);
+        projectSection.style.height = "calc(900px + 320px)";
     }else if(selection === "ALL" ){
         moveItems([{num: 0, top: "0", left: "0"}, {num: 1, top: "0", left: "50%"},
         {num: 2, top: "20%", left: "0"},{num: 3, top: "20%", left: "50%"},
@@ -346,9 +349,10 @@ function configureGalleryItems(selection){
         {num: 8, top: "80", left: "0"}]);
         projectSection.style.height = "calc(1500px + 320px)";
     }else if(selection === "frontend" ){
-        moveItems([{num: 1, top: "0", left: "0"}, {num: 3, top: "0", left: "50%"},
-        {num: 5, top: "20%", left: "0"},{num: 8, top: "20%", left: "50%"}]);
-        projectSection.style.height = "calc(600px + 320px)";
+        moveItems([{num: 0, top: "0", left: "0"}, {num: 1, top: "0", left: "50%"},
+        {num: 3, top: "20%", left: "0"},{num: 4, top: "20%", left: "50%"},
+        {num: 5, top: "40%", left: "0"},{num: 8, top: "40%", left: "50%"}]);
+        projectSection.style.height = "calc(900px + 320px)";
     }else if(selection === "backend"){
         moveItems([{num: 2, top: "0", left: "0"}, {num: 6, top: "0", left: "50%"},
         {num: 7, top: "20%", left: "0"}]);
@@ -356,9 +360,10 @@ function configureGalleryItems(selection){
     }
 }if(window.matchMedia('(max-width: 957px)').matches){
     if(selection === "react"){
-        moveItems([{num: 2, top: "0", left: "0"}, {num: 5, top: "11.11%", left: "0"},
-        {num: 6, top: "22.22%", left: "0"}]);
-        projectSection.style.height = "calc(900px + 320px)";
+        moveItems([{num: 0, top: "0", left: "0"}, {num: 2, top: "11.11%", left: "0"},
+        {num: 5, top: "22.22%", left: "0"},{num: 6, top: "33.33%", left: "0"},
+        {num: 8, top: "44.44%", left: "0"}]);
+        projectSection.style.height = "calc(1500px + 320px)";
     }else if(selection === "ALL" ){
         moveItems([{num: 0, top: "0", left: "0"}, {num: 1, top: "11.11%", left: "0"},
         {num: 2, top: "22.22%", left: "0"},{num: 3, top: "33.33%", left: "0"},
@@ -367,9 +372,10 @@ function configureGalleryItems(selection){
         {num: 8, top: "88.88%", left: "0"}]);
         projectSection.style.height = "calc(2700px + 320px)";
     }else if(selection === "frontend" ){
-        moveItems([{num: 1, top: "0", left: "0"}, {num: 3, top: "11.11%", left: "0"},
-        {num: 5, top: "22.22%", left: "0"},{num: 8, top: "33.33%", left: "0"}]);
-        projectSection.style.height = "calc(1200px + 320px)";
+        moveItems([{num: 0, top: "0", left: "0"}, {num: 1, top: "11.11%", left: "0"},
+        {num: 3, top: "22.22%", left: "0"},{num: 4, top: "33.33%", left: "0"},
+        {num: 5, top: "44.44%", left: "0"},{num: 8, top: "55.55%", left: "0"}]);
+        projectSection.style.height = "calc(1800px + 320px)";
     }else if(selection === "backend"){
         moveItems([{num: 2, top: "0", left: "0"}, {num: 6, top: "11.11%", left: "0"},
         {num: 7, top: "22.22%", left: "0"}]);
@@ -546,15 +552,17 @@ contactForm.onsubmit = (event => {
         mode: 'same-origin',
         credentials: 'same-origin',
         body: JSON.stringify({
-            name: contactForm.querySelector('input[type="text"]').value,
-            email: contactForm.querySelector('input[type="email"]').value,
+            name: contactForm.querySelector('input[name="name"]').value,
+            subject: contactForm.querySelector('input[name="subject"]').value,
             text: contactForm.querySelector('textarea').value
         })
     }).then(res => res.json()).then(data => {
         if(data === 'true'){
-            contactSection.querySelector('.formTitle').insertAdjacentHTML('afterend', '<p class="contact-section__form-msg" >Email has successfully been sent!</p>');
+            contactSection.querySelector('.contact-section__msg-section').innerHTML = '<p class="contact-section__form-msg" >Email has successfully been sent!</p>';
+        }else if(data === 'empty'){
+            contactSection.querySelector('.contact-section__msg-section').innerHTML = '<p class="contact-section__form-msg" style="color: red;">Error. Inputs cannot be empty.</p>';
         }else{
-            contactSection.querySelector('.formTitle').insertAdjacentHTML('afterend', '<p class="contact-section__form-msg" style="color: red;">Sorry. An error occured.</p>');
+            contactSection.querySelector('.contact-section__msg-section').innerHTML = '<p class="contact-section__form-msg" style="color: red;">Sorry. An error occured.</p>';
         }
         contactForm.reset();
     }).catch(err => {console.log(err)});
