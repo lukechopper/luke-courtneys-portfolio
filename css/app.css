@@ -4,11 +4,7 @@
     width: 100%;
     margin: 0 auto;
 }
-@media(max-width: 1300px){
-    .main-container--about-container {
-        max-width: 900px;
-    }
-}
+
 .underline{
     height: 4px;
     background-color: black;
@@ -23,6 +19,8 @@
 }
 body{
     position: relative;
+    overflow-x: hidden;
+    width: 100vw;
 }
 .open-container{
     height: 100vh;
@@ -174,14 +172,14 @@ body{
     border-color: rgba(0,0,0,0.6);
 }
 .about-section__grid{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
     width: 100%;
-    justify-items: center;
+    justify-content: center;
+    align-items: center;
     transform-origin: center;
 }
 .about-section__img{
-    width: 250px;
+    width: 630px;
     height: 250px;
     border-radius: 50%;
     background: url("../img/ResumePhoto.jpg");
@@ -200,16 +198,26 @@ body{
 .about-section__link{
     text-decoration: underline;
 }
+@media(max-width: 1300px){
+    .main-container--about-container {
+        max-width: 900px;
+    }
+    .about-section__img{
+        width: 630px;
+        height: 230px;
+    }
+}
 @media(max-width: 920px){
     .about-section__grid{
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        width: 100%;
-        justify-items: center;
+        flex-direction: column;
     }
     .about-section__grid-not-img{
         width: 100%;
         padding: 40px 20px;
+    }
+    .about-section__img{
+        width: 230px;
+        height: 230px;
     }
 }
 /*PROJECT SECTION*/
