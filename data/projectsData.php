@@ -38,7 +38,7 @@ $projectsData = [
     [
         'title' => 'Live Extreme Weather Tracker',
         'tech' => 'React',
-        'img' => 'https://i.lensdump.com/i/ZBAvxx.png',
+        'img' => 'https://i.lensdump.com/i/ZBk5ok.png',
         'type' => 'react,frontend',
         'id' => 'sixthItem'
     ],

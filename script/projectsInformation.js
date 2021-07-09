@@ -32,7 +32,7 @@ const galleryInformation = [
     {
         title: "Live Extreme Weather Tracker",
         a: "https://www.youtube.com/watch?v=uMSGnZFW-h8&t=13s",
-        img: '<img src="https://i.lensdump.com/i/ZBAvxx.png"  class="project-modal__img" alt="Zg4iw9.jpg" border="0" />',
+        img: '<img src="https://i.lensdump.com/i/ZBk5ok.png"  class="project-modal__img" alt="Zg4iw9.jpg" border="0" />',
         text: "A real time extreme weather tracker, made in React js with the Google Maps Api. This is not some subsistence project. Features include; a real time search bar which allows for filtering based on the event type; clustering, so that the user doesn’t get overwhelmed with the number of markers that are in near vicinity to each other and an information box that gives the user information on the event that they want to look into."
     },
     {
