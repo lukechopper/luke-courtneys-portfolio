@@ -1,25 +1,25 @@
-<div id="allNavBar">
-<section id="navBar">
-    <div class="container">
-        <ul>
-            <li id="home" style="color: #B91C5F;">HOME</li>
-            <li id="about">ABOUT</li>
-            <li id="projects">PROJECTS</li>
-            <li id="abilities">ABILITIES</li>
-            <li id="contact">CONTACT</li>
+<div class="all-nav-bar">
+<section class="all-nav-bar__nav-bar">
+    <div class="all-nav-bar__container">
+        <ul class="all-nav-bar__un-list">
+            <li id="home" class="all-nav-bar__item all-nav-bar__item--pink">HOME</li>
+            <li id="about" class="all-nav-bar__item">ABOUT</li>
+            <li id="projects" class="all-nav-bar__item">PROJECTS</li>
+            <li id="abilities" class="all-nav-bar__item">ABILITIES</li>
+            <li id="contact" class="all-nav-bar__item">CONTACT</li>
         </ul>
-        <i class="fas fa-bars"></i>
+        <i class="fas fa-bars all-nav-bar__icon"></i>
     </div>
-    <div class="footer"></div>
+    <div class="all-nav-bar__footer"></div>
 </section>
-<section id="subNav">
-    <div class="container">
+<section class="all-nav-bar__sub-nav">
+    <div class="all-nav-bar__sub-nav-container">
         <ul>
-            <li id="home" style="color: #B91C5F;">HOME</li>
-            <li id="about">ABOUT</li>
-            <li id="projects">PROJECTS</li>
-            <li id="abilities">ABILITIES</li>
-            <li id="contact">CONTACT</li>
+            <li id="home" class="all-nav-bar__sub-nav-items all-nav-bar__item--pink">HOME</li>
+            <li id="about" class="all-nav-bar__sub-nav-items">ABOUT</li>
+            <li id="projects" class="all-nav-bar__sub-nav-items">PROJECTS</li>
+            <li id="abilities" class="all-nav-bar__sub-nav-items">ABILITIES</li>
+            <li id="contact" class="all-nav-bar__sub-nav-items">CONTACT</li>
         </ul>
     </div>
 </section>
