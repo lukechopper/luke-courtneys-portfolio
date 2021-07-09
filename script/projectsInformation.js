@@ -49,7 +49,7 @@ const galleryInformation = [
     },
     {
         title: "Preference Finder Interactive Quiz",
-        a: "https://www.youtube.com/watch?v=Fegl4X2HdTM&t=72s",
+        a: "https://preference-finder.herokuapp.com/",
         img: '<img src="https://i2.lensdump.com/i/ZBW4vi.png" class="project-modal__img"  alt="Zg4tqz.jpg" border="0" />',
         text: "An animated SPA (single page application) where users can mathematically calculate their preferences, from best to worst, for a list of their choosing."
     }
