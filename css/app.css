@@ -537,26 +537,38 @@ body{
     color: white;
   }
 /*FOOTER*/
-.footer-background{
+.footer{
     width: 100%; 
     background-color: #1B242F; 
     overflow-x: hidden;
+    position:relative;
 }
-.footer{
-    color: white;
-    text-align: center;
-    padding: 280px 0 70px 0;
-    position: relative;
+.main-container--footer{
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    margin: 30px auto 30px auto;
+}
+.footer__socials{
+    padding: 0 8px;
+    fill: white;
+    width: 60px;
+    height: 60px;
+}
+.footer__socials--red{
+    fill: red;
 }
 .footer__copyright{
+    color: white;
     text-align: center;
     text-transform: uppercase;
+    margin: 70px 0 0 0;
 }
 .up-arrow{
     background-color: #F81E77;
     position: absolute;
     left: 50%;
-    bottom: 347px;
+    bottom: 195px;
     width: 47px;
     height: 50px;
     z-index: 50;
