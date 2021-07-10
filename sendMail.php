@@ -34,10 +34,10 @@ if($contentType == 'application/json'){
             $phpmailer->addAddress('lukechopper22@gmail.com');
     
             $phpmailer->send();
-            exit(json_encode('true'));
         }catch(Exception $e){
             exit(json_encode('false'));
         }
+        exit(json_encode('true'));
     }
 }
 
