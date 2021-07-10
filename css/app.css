@@ -198,6 +198,7 @@ body{
 }
 .about-section__link{
     text-decoration: underline;
+    word-wrap: break-word;
 }
 @media(max-width: 1300px){
     .main-container--about-container {
