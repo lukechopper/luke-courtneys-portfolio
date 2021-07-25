@@ -1,4 +1,4 @@
-const galleryInformation = [
+export const galleryInformation = [
     {
         title: "La Stalla At Stables",
         img: '<img src="https://i2.lensdump.com/i/Zg3aqZ.jpg"  class="project-modal__img" alt="Zg3aqZ.jpg" border="0" />',

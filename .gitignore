@@ -1,1 +1,5 @@
 .htaccess
+/script
+/img
+/css
+/node_modules

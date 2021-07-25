@@ -12,8 +12,6 @@
 </div>
 
 <!--Information For Projects Section-->
-<script src="./script/projectsInformation.js"></script>
-<script src="./script/utilFunctions.js"></script>
-<script src="./script/script.js"></script>
+<script src="./dist/app.bundle.js"></script>
 </body>
 </html>

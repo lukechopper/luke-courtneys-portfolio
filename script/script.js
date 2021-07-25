@@ -1,3 +1,8 @@
+import '../css/app.css';
+import '../css/master.css';
+import {galleryInformation} from './projectsInformation.js';
+import {addAndRemoveClasses} from './utilFunctions.js';
+
 //OPENING SPLASHSCREEN
 const downChevron = document.querySelector(".open-container__i");
 const openContainer = document.querySelector(".open-container");
@@ -91,7 +96,7 @@ function animateNavBarUpOrDown(goingUp){
     if(navBarOverlay) return;
     if(goingUp){
         allNavBar.style.top = "-65px";
-        this.setTimeout(() => {
+        setTimeout(() => {
             allNavBar.style.transition = "none";
             allNavBar.style.position = "static";
         }, 500);
@@ -99,7 +104,7 @@ function animateNavBarUpOrDown(goingUp){
     }else{
         allNavBar.style.position = "sticky";
         allNavBar.style.top = "-65px";
-        this.setTimeout(() => {
+        setTimeout(() => {
             allNavBar.style.transition = "top 0.5s";
             allNavBar.style.top = "0";
         }, 50);
@@ -124,15 +129,15 @@ window.addEventListener("scroll", function() {
         window.pageYOffset < projectSection.offsetTop + projectSection.clientHeight - 60){
         selectNavItems(2);
     }else if(window.pageYOffset > abilitiesSection.offsetTop - 60 &&
-        window.pageYOffset < abilitiesSection.offsetTop + abilitiesSection.clientHeight - 60){
+        window.pageYOffset < abilitiesSection.offsetTop + abilitiesSection.clientHeight - 200){
         selectNavItems(3);
-    }else if(window.pageYOffset > contactSection.offsetTop - 60 &&
+    }else if(window.pageYOffset > contactSection.offsetTop - 200 &&
         window.pageYOffset < contactSection.offsetTop + contactSection.clientHeight - 60){
             selectNavItems(4);
         }
 
     if(window.pageYOffset > openContainer.offsetTop + openContainer.clientHeight){
-        if(!hasNavAnimated && this.innerHeight > 800){
+        if(!hasNavAnimated && innerHeight > 800){
             animateNavBarUpOrDown(false);
         }
     }
@@ -221,7 +226,7 @@ let currentGallery = "ALL";
 
 gHReact.onclick = () => {
 
-    if(this.innerWidth > 616){
+    if(innerWidth > 616){
         gsap.to(selector, {left: "122px", width: "120px",
         duration: 1});
     }else{
@@ -238,8 +243,8 @@ gHReact.onclick = () => {
      galleryMenuColour(1);
 }
 gHAll.onclick = () => {
-    if(this.innerWidth > 616){
-        gsap.to(selector, {left: "13px", width: "100px",
+    if(innerWidth > 616){
+        gsap.to(selector, {left: "20px", width: "100px",
         duration: 1});
     }else{
         gsap.to(selector, {left: "26px", width: "50px",
@@ -257,7 +262,7 @@ gHAll.onclick = () => {
 
 }
 gHFrontend.onclick = () => {
-    if(this.innerWidth > 616){
+    if(innerWidth > 616){
         gsap.to(selector, {left: "260px", width: "150px",
         duration: 1});
     }else{
@@ -275,7 +280,7 @@ gHFrontend.onclick = () => {
 
 }
 gHBackend.onclick = () => {
-    if(this.innerWidth > 616){
+    if(innerWidth > 616){
         gsap.to(selector, {left: "437px", width: "130px",
         duration: 1});
     }else{
@@ -305,9 +310,6 @@ function galleryMenuColour(num){
     }
 }
 
-
-
-const galleryContainer = document.querySelector(".project-section__gallery-container");
 
 const galleryItems = document.querySelectorAll(".project-section__gallery-container-item");
 
