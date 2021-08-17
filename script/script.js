@@ -244,7 +244,7 @@ gHReact.onclick = () => {
 }
 gHAll.onclick = () => {
     if(innerWidth > 616){
-        gsap.to(selector, {left: "20px", width: "100px",
+        gsap.to(selector, {left: "20px", width: "90px",
         duration: 1});
     }else{
         gsap.to(selector, {left: "26px", width: "50px",
