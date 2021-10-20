@@ -30,14 +30,20 @@ navBar.querySelectorAll("li").forEach(ele => {
 subNav.querySelectorAll("li").forEach(ele => {
     subNavItems.push(ele);
 });
-
+let autoScroolCoolDown = false;
 //Add event listener for nav items; so that we go to the relevant section on a click
 function addNavEventListener(num, sect){
     navItems[num].addEventListener("click", () => {
+        autoScroolCoolDown = true;
         sect.scrollIntoView({behavior: "smooth", block: "start"});
+        selectNavItems(num);
+        setTimeout(() => {autoScroolCoolDown = false}, 500);
     });
     subNavItems[num].addEventListener("click", () => {
+        autoScroolCoolDown = true;
         sect.scrollIntoView({behavior: "smooth", block: "start"});
+        selectNavItems(num);
+        setTimeout(() => {autoScroolCoolDown = false}, 500);
     });
 };
 
@@ -111,9 +117,9 @@ function animateNavBarUpOrDown(goingUp){
         hasNavAnimated = true;
     }
 }
-
 //Highlight the different sections of the navBar based on where the user has positioned their scroll
 window.addEventListener("scroll", function() {
+    if(autoScroolCoolDown) return;
     //Scrolled onto about
     if(window.pageYOffset > openContainer.offsetTop + openContainer.clientHeight &&
         window.pageYOffset < aboutSection.offsetTop + aboutSection.clientHeight - 60){
@@ -215,7 +221,7 @@ const gHBackend = galleryHeader.querySelector("#backend");
 const selector = galleryHeader.querySelector(".project-section__selector");
 
 
-if(window.matchMedia('(max-width: 616px)').matches){
+if(window.innerWidth < 617){
     selector.style.left = "26px";
     selector.style.width = "50px";
 }
@@ -314,11 +320,60 @@ function galleryMenuColour(num){
 const galleryItems = document.querySelectorAll(".project-section__gallery-container-item");
 
 function configureGalleryItems(selection){
-    if(window.matchMedia('(min-width: 1301px)').matches){
+    if(window.innerWidth < 958){
+        if(selection === "react"){
+            moveItems([{num: 0, top: "0", left: "0"}, {num: 5, top: "11.11%", left: "0"},
+            {num: 6, top: "22.22%", left: "0"},{num: 8, top: "33.33%", left: "0"}]);
+            projectSection.style.height = "calc(1200px + 320px)";
+        }else if(selection === "ALL" ){
+            moveItems([{num: 0, top: "0", left: "0"}, {num: 1, top: "11.11%", left: "0"},
+            {num: 2, top: "22.22%", left: "0"},{num: 3, top: "33.33%", left: "0"},
+            {num: 4, top: "44.44%", left: "0"},{num: 5, top: "55.55%", left: "0"},
+            {num: 6, top: "66.66%", left: "0"},{num: 7, top: "77.77%", left: "0"},
+            {num: 8, top: "88.88%", left: "0"}]);
+            projectSection.style.height = "calc(2700px + 320px)";
+        }else if(selection === "frontend" ){
+            moveItems([{num: 0, top: "0", left: "0"}, {num: 1, top: "11.11%", left: "0"},
+            {num: 3, top: "22.22%", left: "0"},{num: 4, top: "33.33%", left: "0"},
+            {num: 5, top: "44.44%", left: "0"},{num: 8, top: "55.55%", left: "0"}]);
+            projectSection.style.height = "calc(1800px + 320px)";
+        }else if(selection === "backend"){
+            moveItems([{num: 2, top: "0", left: "0"}, {num: 6, top: "11.11%", left: "0"},
+            {num: 7, top: "22.22%", left: "0"}]);
+            projectSection.style.height = "calc(900px + 320px)";
+        }
+        return;
+    }
+
+    if(window.innerWidth < 1301){
+        if(selection === "react"){
+            moveItems([{num: 0, top: "0", left: "0"}, {num: 5, top: "0", left: "50%"},
+            {num: 6, top: "20%", left: "0"},{num: 8, top: "20%", left: "50%"}]);
+            projectSection.style.height = "calc(600px + 320px)";
+        }else if(selection === "ALL" ){
+            moveItems([{num: 0, top: "0", left: "0"}, {num: 1, top: "0", left: "50%"},
+            {num: 2, top: "20%", left: "0"},{num: 3, top: "20%", left: "50%"},
+            {num: 4, top: "40%", left: "0"},{num: 5, top: "40%", left: "50%"},
+            {num: 6, top: "60%", left: "0"},{num: 7, top: "60%", left: "50%"},
+            {num: 8, top: "80", left: "0"}]);
+            projectSection.style.height = "calc(1500px + 320px)";
+        }else if(selection === "frontend" ){
+            moveItems([{num: 0, top: "0", left: "0"}, {num: 1, top: "0", left: "50%"},
+            {num: 3, top: "20%", left: "0"},{num: 4, top: "20%", left: "50%"},
+            {num: 5, top: "40%", left: "0"},{num: 8, top: "40%", left: "50%"}]);
+            projectSection.style.height = "calc(900px + 320px)";
+        }else if(selection === "backend"){
+            moveItems([{num: 2, top: "0", left: "0"}, {num: 6, top: "0", left: "50%"},
+            {num: 7, top: "20%", left: "0"}]);
+            projectSection.style.height = "calc(600px + 320px)";
+        }
+        return;
+    }
+
+    if(window.innerWidth > 1300){
     if(selection === "react"){
-        moveItems([{num: 0, top: "0", left: "0"}, {num: 2, top: "0", left: "33.33%"},
-        {num: 5, top: "0", left: "66.66%"},{num: 6, top: "33.33%", left: "0"},
-        {num: 8, top: "33.33%", left: "33.33%"}]);
+        moveItems([{num: 0, top: "0", left: "0"}, {num: 5, top: "0", left: "33.33%"},
+        {num: 6, top: "33.33%", left: "0"},{num: 8, top: "0", left: "66.66%"}]);
         projectSection.style.height = "calc(600px + 320px)";
     }else if(selection === "ALL" ){
         moveItems([{num: 0, top: "0", left: "0"}, {num: 1, top: "0", left: "33.33%"},
@@ -336,52 +391,6 @@ function configureGalleryItems(selection){
         moveItems([{num: 2, top: "0", left: "0"}, {num: 6, top: "0", left: "33.33%"},
         {num: 7, top: "0", left: "66.66%"}]);
         projectSection.style.height = "calc(300px + 320px)";
-    }
-}if(window.matchMedia('(max-width: 1300px)').matches){
-    if(selection === "react"){
-        moveItems([{num: 0, top: "0", left: "0"}, {num: 2, top: "0", left: "50%"},
-        {num: 5, top: "20%", left: "0"},{num: 6, top: "20%", left: "50%"},
-        {num: 8, top: "40%", left: "0"}]);
-        projectSection.style.height = "calc(900px + 320px)";
-    }else if(selection === "ALL" ){
-        moveItems([{num: 0, top: "0", left: "0"}, {num: 1, top: "0", left: "50%"},
-        {num: 2, top: "20%", left: "0"},{num: 3, top: "20%", left: "50%"},
-        {num: 4, top: "40%", left: "0"},{num: 5, top: "40%", left: "50%"},
-        {num: 6, top: "60%", left: "0"},{num: 7, top: "60%", left: "50%"},
-        {num: 8, top: "80", left: "0"}]);
-        projectSection.style.height = "calc(1500px + 320px)";
-    }else if(selection === "frontend" ){
-        moveItems([{num: 0, top: "0", left: "0"}, {num: 1, top: "0", left: "50%"},
-        {num: 3, top: "20%", left: "0"},{num: 4, top: "20%", left: "50%"},
-        {num: 5, top: "40%", left: "0"},{num: 8, top: "40%", left: "50%"}]);
-        projectSection.style.height = "calc(900px + 320px)";
-    }else if(selection === "backend"){
-        moveItems([{num: 2, top: "0", left: "0"}, {num: 6, top: "0", left: "50%"},
-        {num: 7, top: "20%", left: "0"}]);
-        projectSection.style.height = "calc(600px + 320px)";
-    }
-}if(window.matchMedia('(max-width: 957px)').matches){
-    if(selection === "react"){
-        moveItems([{num: 0, top: "0", left: "0"}, {num: 2, top: "11.11%", left: "0"},
-        {num: 5, top: "22.22%", left: "0"},{num: 6, top: "33.33%", left: "0"},
-        {num: 8, top: "44.44%", left: "0"}]);
-        projectSection.style.height = "calc(1500px + 320px)";
-    }else if(selection === "ALL" ){
-        moveItems([{num: 0, top: "0", left: "0"}, {num: 1, top: "11.11%", left: "0"},
-        {num: 2, top: "22.22%", left: "0"},{num: 3, top: "33.33%", left: "0"},
-        {num: 4, top: "44.44%", left: "0"},{num: 5, top: "55.55%", left: "0"},
-        {num: 6, top: "66.66%", left: "0"},{num: 7, top: "77.77%", left: "0"},
-        {num: 8, top: "88.88%", left: "0"}]);
-        projectSection.style.height = "calc(2700px + 320px)";
-    }else if(selection === "frontend" ){
-        moveItems([{num: 0, top: "0", left: "0"}, {num: 1, top: "11.11%", left: "0"},
-        {num: 3, top: "22.22%", left: "0"},{num: 4, top: "33.33%", left: "0"},
-        {num: 5, top: "44.44%", left: "0"},{num: 8, top: "55.55%", left: "0"}]);
-        projectSection.style.height = "calc(1800px + 320px)";
-    }else if(selection === "backend"){
-        moveItems([{num: 2, top: "0", left: "0"}, {num: 6, top: "11.11%", left: "0"},
-        {num: 7, top: "22.22%", left: "0"}]);
-        projectSection.style.height = "calc(900px + 320px)";
     }
 }
 
@@ -463,6 +472,7 @@ function generateOverlay(btn){
     //Add Event Listeners
     overlay.addEventListener('click', closeCard);
     card.querySelector('.project-modal__x-icon').addEventListener('click', closeCard);
+    document.body.style.overflow = 'hidden';
     //Send NavBar Up
     if(hasNavAnimated && innerHeight > 800){
         animateNavBarUpOrDown(true);
@@ -476,6 +486,7 @@ function closeCard(e){
     }
     const overlay = document.querySelector(".project-modal");
     const card = overlay.querySelector(".project-modal__card");
+    document.body.style.overflow = '';
     gsap.to(overlay, {duration: 0.3, opacity: 0});
     setTimeout(() => {
         overlay.remove();
@@ -494,11 +505,11 @@ window.addEventListener("resize", e => {
 
     configureGalleryItems(currentGallery);
 
-    const mediaQuery = window.matchMedia('(max-width: 616px)');
+    const mediaQuery = window.innerWidth < 617;
 
-    const navBarMediaQuery = window.matchMedia('(max-height: 800px)');
+    const navBarMediaQuery = window.innerHeight < 801;
 
-    if(mediaQuery.matches){
+    if(mediaQuery){
         switch(currentSelect){
             case 0:
                 selector.style.left = "26px";
@@ -516,7 +527,7 @@ window.addEventListener("resize", e => {
                 selector.style.left = "258px";
                 selector.style.width = "80px";
         }
-    }else if(!mediaQuery.matches){
+    }else if(!mediaQuery){
         switch(currentSelect){
             case 0:
                 selector.style.left = "13px";
@@ -536,11 +547,11 @@ window.addEventListener("resize", e => {
         }
     }
 
-    if(navBarMediaQuery.matches){
+    if(navBarMediaQuery){
         if(hasNavAnimated){
             animateNavBarUpOrDown(true);
         }
-    }else if(!navBarMediaQuery.matches){
+    }else if(!navBarMediaQuery){
         if(!hasNavAnimated){
             animateNavBarUpOrDown(false);
         }

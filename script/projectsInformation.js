@@ -12,10 +12,10 @@ export const galleryInformation = [
         text: "Based on the eminent online arcade game, Tank Trouble. This inspired game, features all of the core mechanics of the real one. The defining feature of this one, is that it was created in pure JavaScript and HTML5 canvas, so no JavaScript frameworks or anything of that nature was used. This game really was built from the ground up. Which makes its smooth gameplay and comprehensive collision detection all the more commendable. "
     },
     {
-        title: "Ersatz Amazon Sidebar",
-        a: "https://www.youtube.com/watch?v=luJlfKc4etw&t=90s",
-        img: '<img src="https://i3.lensdump.com/i/ZBAq27.png"  class="project-modal__img" alt="Zg41YT.jpg" border="0" />',
-        text: "Replica of the Amazon Sidebar that was in use as of the project’s creation. Was designed to look and feel like the real version as much as possible. All functionality has been recreated; everything from animations, to content. All can be found here, and the full process, from start to finish, can be found on my YouTube channel. "
+        title: "Kings Chippy & Chinese Takeaway",
+        a: "https://kingschippyandchinese.herokuapp.com/",
+        img: '<img src="https://i1.lensdump.com/i/gdr8mP.png" class="project-modal__img" alt="gdr8mP.png" border="0" />',
+        text: "Client work for a local Chinese takeaway. Along with the restaurant’s key information, it provides users with an interact menu where users can order the food of their choice complete with whatever sides and sources that they want — all of which comes complete with a proper functioning payment and transaction system as well."
     },
     {
         title: "Ersatz BBC Website",

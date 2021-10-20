@@ -15,9 +15,9 @@ $projectsData = [
         'id' => 'secondItem'
     ],
     [
-        'title' => 'Ersatz Amazon Sidebar',
-        'tech' => 'React / Nodejs',
-        'img' => 'https://i3.lensdump.com/i/ZBAq27.png',
+        'title' => 'Kings Chippy & Chinese Takeaway',
+        'tech' => 'Nodejs / HTML, CSS & JavaScript',
+        'img' => 'https://i1.lensdump.com/i/gdr8mP.png',
         'type' => 'react,backend',
         'id' => 'thirdItem'
     ],
